@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
 <%@ page import="java.sql.Connection" import="java.sql.PreparedStatement" import="java.sql.SQLException" 
-import="java.sql.ResultSet" import="java.util.*" import="edu.unomaha.aesmith.marketplace.Listing" %>
+import="java.sql.ResultSet" import="java.util.*" import="edu.controllers.Listing" %>
 <!DOCTYPE html>
 <html>
 
@@ -10,8 +10,7 @@ import="java.sql.ResultSet" import="java.util.*" import="edu.unomaha.aesmith.mar
 <title>Artifact Marketplace</title>
 </head>
 
-<%! 
-	public edu.unomaha.aesmith.marketplace.Listing[] getListings() {
+<%!public edu.controllers.Listing[] getListings() {
 	// request
 	Connection myConnection = (Connection) getServletContext().getAttribute("DBConnect");
 	PreparedStatement mySQL = null;
@@ -72,8 +71,7 @@ import="java.sql.ResultSet" import="java.util.*" import="edu.unomaha.aesmith.mar
 	}
 	
 	return returnVal;
-}
-%>
+}%>
 
 <body bgcolor="#34495E" text="#ffffff">
 <!-- Page Information -->

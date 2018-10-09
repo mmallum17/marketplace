@@ -1,4 +1,4 @@
-package edu.unomaha.aesmith.marketplace;
+package edu.controllers;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
