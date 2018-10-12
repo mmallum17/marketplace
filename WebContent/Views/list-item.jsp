@@ -7,6 +7,15 @@
 <title>List Item</title>
 </head>
 <body>
-List Item
+	<ul>
+		<li><a href="">Home</a></li>
+		<li><a href="item-details">Item Details</a></li>
+		<li><a href="list-item">List Item</a></li>
+		<li><a href="login">Login</a></li>
+		<li><a href="items">Marketplace</a></li>
+		<li><a href="signup">Signup</a></li>
+		<li><a href="user-dashboard">User Dashboard</a></li>
+		<li><a href="user-details">User Details</a></li>
+	</ul>
 </body>
 </html>
