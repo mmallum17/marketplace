@@ -17,5 +17,15 @@
 		<li><a href="user-dashboard">User Dashboard</a></li>
 		<li><a href="user-details">User Details</a></li>
 	</ul>
+	<form action="login" method="post">
+		Name:<br> 
+		<input type="text" name="name" required><br> 
+		Email:<br> 
+		<input type="text" name="email" required><br>
+		Password:<br> 
+		<input type="text" name="password" required><br>
+		<br> <input type="submit" value="Submit">
+	</form>
+
 </body>
 </html>
