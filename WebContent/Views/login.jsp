@@ -19,7 +19,7 @@
 	</ul>
 	<form action="login" method="post">
 		Email:<br> 
-		<input type="text" name="email" required><br>
+		<input type="email" name="email" required><br>
 		Password:<br> 
 		<input type="text" name="password" required><br>
 		<br> <input type="submit" value="Submit">

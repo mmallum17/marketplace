@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.User;
+
 /**
  * Servlet implementation class Login
  */
@@ -48,7 +50,7 @@ public class LoginController extends HttpServlet {
 
 		// Get user from database
 		Connection conn = (Connection) getServletContext().getAttribute("DBConnect");
-		String query = "SELECT PASSWORD FROM user WHERE email = ?";
+		String query = "SELECT id,name,password FROM user WHERE email = ?";
 		PreparedStatement preparedStmt;
 		try {
 			preparedStmt = conn.prepareStatement(query);
@@ -58,7 +60,12 @@ public class LoginController extends HttpServlet {
 				String actualPassword = rs.getString("password");
 				if(inputPassword.equals(actualPassword)) {
 					System.out.println("User is logged in");
-					request.getSession().setAttribute("user", email);
+					// Store user in session
+					User loggedInUser = new User();
+					loggedInUser.setId(rs.getInt("id"));
+					loggedInUser.setName(rs.getString("name"));
+					loggedInUser.setEmail(email);
+					request.getSession().setAttribute("user", loggedInUser);
 				}
 				else {
 					System.out.println("Incorrect password");
