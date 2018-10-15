@@ -21,7 +21,7 @@
 	<%
 		Listing listing = (Listing) request.getAttribute("listing");
 	%>
-	Name: <a href="item-details?id=<%=listing.getId()%>"><%=listing.getName()%></a><br>
+	Name: <%=listing.getName()%><br>
 	Price: $<%=listing.getPrice()%><br> 
 	Description: <%=listing.getDescription()%><br> 
 	Seller: <%=listing.getSeller().getName()%><br>
