@@ -1,4 +1,4 @@
-package models;
+package edu.models;
 
 public class User implements java.io.Serializable{
 	private int id;

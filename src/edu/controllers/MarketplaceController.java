@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.User;
-import models.Listing;
+import edu.models.Listing;
+import edu.models.User;
 
 /**
  * Servlet implementation class Marketplace

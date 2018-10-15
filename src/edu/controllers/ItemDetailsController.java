@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.Listing;
-import models.User;
+import edu.models.Listing;
+import edu.models.User;
 
 /**
  * Servlet implementation class ItemDetails
