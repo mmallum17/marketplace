@@ -25,7 +25,7 @@
 		for (int i = 0; i < currentListings.size(); i++) {
 		Listing listing = currentListings.get(i);
 	%>
-		Name: <%= listing.getName() %><br>
+		Name: <a href="item-details?id=<%= listing.getId() %>"><%= listing.getName() %></a><br>
 		Price: $<%= listing.getPrice() %><br>
 		Description: <%= listing.getDescription() %><br>
 		Seller: <%= listing.getSeller().getName() %><br><br>
