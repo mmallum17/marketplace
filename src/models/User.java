@@ -4,8 +4,14 @@ public class User implements java.io.Serializable{
 	private int id;
 	private String name;
 	private String email;
+	private String imageFilepath;
 	
-	public User() {}
+	public User(int id, String name, String email, String imageFilepath) {
+		setId(id);
+		setName(name);
+		setEmail(email);
+		setImageFilepath(imageFilepath);
+	}
 
 	public void setId(int id) {
 		this.id = id;
@@ -29,5 +35,13 @@ public class User implements java.io.Serializable{
 	
 	public String getEmail() {
 		return email;
+	}
+	
+	public void setImageFilepath(String imageFilepath) {
+		this.imageFilepath = imageFilepath;
+	}
+	
+	public String imageFilepath() {
+		return imageFilepath;
 	}
 }

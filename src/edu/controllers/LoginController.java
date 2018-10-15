@@ -61,10 +61,7 @@ public class LoginController extends HttpServlet {
 				if(inputPassword.equals(actualPassword)) {
 					System.out.println("User is logged in");
 					// Store user in session
-					User loggedInUser = new User();
-					loggedInUser.setId(rs.getInt("id"));
-					loggedInUser.setName(rs.getString("name"));
-					loggedInUser.setEmail(email);
+					User loggedInUser = new User(rs.getInt("id"), rs.getString("name"), email, null);
 					request.getSession().setAttribute("user", loggedInUser);
 				}
 				else {

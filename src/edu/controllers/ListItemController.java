@@ -50,7 +50,7 @@ public class ListItemController extends HttpServlet {
 
 		// Insert new item into database
 		Connection conn = (Connection) getServletContext().getAttribute("DBConnect");
-		String query = "INSERT INTO item (name, description, price, seller_id, image_filepath) VALUES (?, ?, ?, ?, ?)";
+		String query = "INSERT INTO listing (name, description, price, seller_id, image_filepath) VALUES (?, ?, ?, ?, ?)";
 		PreparedStatement preparedStmt;
 		try {
 			preparedStmt = conn.prepareStatement(query);
