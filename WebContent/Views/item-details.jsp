@@ -10,7 +10,6 @@
 <body>
 	<ul>
 		<li><a href="">Home</a></li>
-		<li><a href="item-details">Item Details</a></li>
 		<li><a href="list-item">List Item</a></li>
 		<li><a href="login">Login</a></li>
 		<li><a href="items">Marketplace</a></li>
