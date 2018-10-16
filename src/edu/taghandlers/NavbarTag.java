@@ -10,7 +10,7 @@ public class NavbarTag extends SimpleTagSupport{
 	public void doTag() throws JspException, IOException {
 		JspWriter out = getJspContext().getOut();
 		out.println("<ul>"
-				+ "<li><a href=\"\">Home</a></li>"
+				+ "<li><a href=\"home\">Home</a></li>"
 				+ "<li><a href=\"list-item\">List Item</a></li>"
 				+ "<li><a href=\"login\">Login</a></li>\r\n"
 				+ "<li><a href=\"items\">Marketplace</a></li>"
