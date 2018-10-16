@@ -18,8 +18,10 @@
 		Listing listing = currentListings.get(i);
 	%>
 		Name: <a href="item-details?id=<%= listing.getId() %>"><%= listing.getName() %></a><br>
+		<img src="<%= listing.getImageFilepath() %>">
 		Price: $<%= listing.getPrice() %><br>
 		Description: <%= listing.getDescription() %><br>
+		<img src="<%= listing.getSeller().imageFilepath() %>">
 		Seller: <%= listing.getSeller().getName() %><br><br>
 	<% } %>
 </body>
