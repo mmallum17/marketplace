@@ -16,4 +16,24 @@
     <param-name>DBURL</param-name>
     <param-value>jdbc:mysql://ec2-18-217-205-10.us-east-2.compute.amazonaws.com:3306/marketplace</param-value>
   </context-param>
+  <context-param>
+    <description>Windows Root</description>
+    <param-name>windowsRoot</param-name>
+    <param-value>C:/apps/marketplace</param-value>
+  </context-param>
+  <context-param>
+    <description>Linux Root</description>
+    <param-name>linuxRoot</param-name>
+    <param-value>/apps/marketplace</param-value>
+  </context-param>
+  <context-param>
+    <description>Location to store user images</description>
+    <param-name>userImagePath</param-name>
+    <param-value>images/user</param-value>
+  </context-param>
+    <context-param>
+    <description>Location to store item images</description>
+    <param-name>itemImagePath</param-name>
+    <param-value>images/item</param-value>
+  </context-param>
 </web-app>

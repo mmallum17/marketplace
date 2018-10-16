@@ -10,11 +10,11 @@
 <body>
 	<ex:navbar/>
 	<h3>Add New Listing</h3>
-	<form action="list-item" method="post">
+	<form action="list-item" method="post" enctype="multipart/form-data">
 		Item Name:<br> <input type="text" name="itemName" required><br>
 		Price:<br> <input type="number" name="price" required><br>
 		Description:<br> <input type="text" name="description"><br>
-		Image Path:<br> <input type="text" name="imagePath"><br>
+		Upload item photo:<br> <input type="file" name="photo" /><br>		
 		<br> <input type="submit" value="List Item">
 	</form>
 </body>
