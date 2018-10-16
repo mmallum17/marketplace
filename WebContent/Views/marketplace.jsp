@@ -22,8 +22,20 @@
 			<ul>
 				<li><a href="home">home</a></li>
 				<li class="active"><a href="items">marketplace</a></li>
+				<%
+					User currentUser = (User) session.getAttribute("user");
+					if (currentUser == null) {
+				%>
 				<li><a href="login">log in</a></li>
 				<li><a href="signup">sign up</a></li>
+				<%
+					} else {
+				%>
+				<li><a href="list-item">list item</a></li>
+				<li><a href="logout">logout</a></li>
+				<%
+					}
+				%>
 			</ul>
 		</nav>
 	</header>

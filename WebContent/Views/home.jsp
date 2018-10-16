@@ -1,3 +1,4 @@
+<%@page import="edu.models.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="ex" uri="/WEB-INF/custom-tags.tld"%>
@@ -19,8 +20,21 @@
 			<ul>
 				<li class="active"><a href="home">home</a></li>
 				<li><a href="items">marketplace</a></li>
+				<%
+					User currentUser = (User) session.getAttribute("user");
+					if(currentUser == null) {
+				%>
 				<li><a href="login">log in</a></li>
 				<li><a href="signup">sign up</a></li>
+				<%
+					}
+					else {
+				%>
+				<li><a href="list-item">list item</a></li>
+				<li><a href="logout">logout</a></li>
+				<%		
+					}
+				%>
 			</ul>
 		</nav>
 	</header>

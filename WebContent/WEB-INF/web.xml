@@ -31,7 +31,7 @@
     <param-name>userImagePath</param-name>
     <param-value>images/user</param-value>
   </context-param>
-    <context-param>
+  <context-param>
     <description>Location to store item images</description>
     <param-name>itemImagePath</param-name>
     <param-value>images/item</param-value>

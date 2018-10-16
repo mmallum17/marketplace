@@ -1,3 +1,5 @@
+<%@page import="edu.models.User"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="ex" uri="/WEB-INF/custom-tags.tld"%>
@@ -5,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>avMarket Community Marketplace</title>
+<title>MavMarket Community Marketplace</title>
 <link rel="stylesheet" type="text/css"
 	href="assets/css/mavmarketcss.css">
 </head>
@@ -19,8 +21,20 @@
 			<ul>
 				<li><a href="home">home</a></li>
 				<li><a href="items">marketplace</a></li>
+				<%
+					User currentUser = (User) session.getAttribute("user");
+					if (currentUser == null) {
+				%>
 				<li class="active"><a href="login">log in</a></li>
 				<li><a href="signup">sign up</a></li>
+				<%
+					} else {
+				%>
+				<li ><a href="list-item">list item</a></li>
+				<li><a href="logout">logout</a></li>
+				<%
+					}
+				%>
 			</ul>
 		</nav>
 	</header>
