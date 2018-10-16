@@ -107,7 +107,7 @@ em, i {font-style: italic;}
 	  margin: 0;
 	}
 
-  #mavbanner nav a:link, #banner nav a:visited {
+  #mavbanner nav a:link, #mavbanner nav a:visited,#banner nav a:visited {
     color: #fff;
     display: inline-block;
     height: 30px;

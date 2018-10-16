@@ -41,7 +41,6 @@ public class SignupController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println(System.getProperty("os.name"));
 		request.getRequestDispatcher("Views/signup.jsp").forward(request, response);
 	}
 
