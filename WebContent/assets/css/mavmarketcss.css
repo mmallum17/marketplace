@@ -1,0 +1,172 @@
+/*mav logo*/
+#mavbanner {
+  margin: 0 auto;
+  padding: 2.5em 0 0 0;
+	text-align: center;
+	
+}
+	#logo {
+		max-width: 50%;
+		margin-bottom: 2em;
+	}
+  #mavbanner h1 {font-size: 3.571em; line-height: .6;}
+  #mavbanner h1 a:link, #banner h1 a:visited {
+    color: #000305;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .6em .2em;
+    text-decoration: none;
+    width: 427px;
+  }
+  #mavbanner h1 a:hover, #banner h1 a:active {
+    background: none;
+    color: #C74350;
+    text-shadow: none;
+  }
+
+  #mavbanner h1 strong {font-size: 0.36em; font-weight: normal;}
+	
+/*page*/
+	body {
+background-color: #8a8a8a;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #8c3437 15%, #505050 85%);
+	background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #8c3437 15%, #505050 85%);
+	background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #8c3437 15%, #505050 85%);
+	background-image: url("images/overlay.png"), linear-gradient(45deg, #8c3437 15%, #505050 85%);
+		color: #000000;
+    font-size: 87.5%; /* Base font size: 14px */
+    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.429;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+	}
+.body {clear: both; margin: 0 auto; width: 800px;}
+	
+/*headings*/
+h2 {font-size: 1.6em}
+h3 {font-size: 1.4em}
+h4 {font-size: 1.2em}
+h5 {font-size: 1.1em}
+h6 {font-size: 1em}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: .8em;
+}
+	
+/*links*/
+	a {outline: 0;}
+a img {border: 0px; text-decoration: none;}
+a:link, a:visited {
+  color: #C74350;
+  padding: 0 1px;
+  text-decoration: none;
+}
+a:hover, a:active {
+  background-color: #C74350;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #333;
+}
+	
+/*paragraphs*/
+	p {margin-bottom: 1.143em;}
+* p:last-child {margin-bottom: 0;}
+
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+
+::selection {background: #8c3437; color: white;}
+
+/*navigation*/
+  #mavbanner nav {
+    background: black;
+    font-size: 1.143em;
+    height: 40px;
+    line-height: 30px;
+    margin: 0 auto 2em auto;
+    padding: 0;
+    width: 800px;
+    border-radius: 6px;
+	padding-left: 0;
+	vertical-align: left;
+	  font-weight: bold;
+  }
+
+  #mavbanner nav ul {
+	  list-style-type: none !important; 
+	  margin: 0 auto;
+	  padding: 0;
+	  width: 800px;
+  }
+  #mavbanner nav li {
+	  float: left; 
+	  display: inline; 
+	  margin: 0;
+	}
+
+  #mavbanner nav a:link, #banner nav a:visited {
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    padding: 5px 1.5em;
+    text-decoration: none;
+  }
+  #mavbanner nav a:hover, #banner nav a:active,
+  #mavbanner nav .active a:link, #banner nav .active a:visited {
+    background: #C74451;
+    color: #fff;
+    text-shadow: none !important;
+  }
+
+  #mavbanner nav li:first-child a {
+	  margin-left: 0;
+	  float: left;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+	
+/*page description*/
+	#page-description {
+  background: white;
+  margin-bottom: 2em;
+  overflow: hidden;
+  padding: 20px;
+  width: 760px;
+  border-radius: 12px;
+	}
+	#page-description h2 {color: #C74451; font-size: 1.7em;}
+	
+/*content*/
+	/*page description*/
+	#content {
+  background: white;
+  margin-bottom: 2em;
+  overflow: hidden;
+  padding: 20px;
+  width: 760px;
+  border-radius: 12px;
+	}
+	#content h2 {color: #C74451; font-size: 1.7em;}
+	
+/*website description*/
+	#website-description {
+	background: white;
+  font-style: normal;
+  margin-bottom: 1em;
+  overflow: hidden;
+  padding: 20px;
+  text-align: left;
+  width: 760px;
+
+  border-radius: 12px;
+	}
+	
+/*copyright*/
+	#copyright {
+		color: #ffd3d3;
+		text-align: right;
+		margin-bottom: 1em;
+	}
