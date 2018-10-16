@@ -89,8 +89,8 @@ public class SignupController extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		// Redirect to user's dashboard
-		response.sendRedirect("user-dashboard");
+		// Redirect to login
+		response.sendRedirect("login");
 	}
 	
 	private static String getSubmittedFileName(Part part) {

@@ -79,8 +79,8 @@ public class LoginController extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		// Redirect to user's dashboard
-		response.sendRedirect("user-dashboard");
+		// Redirect to marketplace **CHANGE LATER TO USER DASHBOARD**
+		response.sendRedirect("items");
 	}
 
 }
