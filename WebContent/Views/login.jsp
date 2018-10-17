@@ -47,6 +47,11 @@
 		</h2>
 		<p>Please log in to your user account using your email and
 			password.</p>
+		<%
+			if(request.getAttribute("invalidUserCreds") != null) {
+				out.println("<p style=\"color:red;\">Invalid email or password! Please try again!</p>");
+			}
+		%>
 		<form action="login" method="post">
 			Email:<br> <input type="email" name="email" required><br>
 			Password:<br> <input type="password" name="password" required><br>

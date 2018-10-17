@@ -63,13 +63,19 @@ public class LoginController extends HttpServlet {
 					// Store user in session
 					User loggedInUser = new User(rs.getInt("id"), rs.getString("name"), email, null);
 					request.getSession().setAttribute("user", loggedInUser);
+					// Redirect to marketplace **CHANGE LATER TO USER DASHBOARD**
+					response.sendRedirect("items");
 				}
 				else {
 					System.out.println("Incorrect password");
+					request.setAttribute("invalidUserCreds", true);
+					request.getRequestDispatcher("Views/login.jsp").forward(request, response);
 				}
 			}
 			else {
 				System.out.println("User does not exist");
+				request.setAttribute("invalidUserCreds", true);
+				request.getRequestDispatcher("Views/login.jsp").forward(request, response);
 			}
 
 		} catch (SQLException e) {
@@ -79,8 +85,6 @@ public class LoginController extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		// Redirect to marketplace **CHANGE LATER TO USER DASHBOARD**
-		response.sendRedirect("items");
 	}
 
 }
