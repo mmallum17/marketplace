@@ -52,14 +52,15 @@
 			for (int i = 0; i < currentListings.size(); i++) {
 				Listing listing = currentListings.get(i);
 		%>
-		Name: <a href="item-details?id=<%=listing.getId()%>"><%=listing.getName()%></a>
-		<br> <img src="<%=listing.getImageFilepath()%>"
-			style="width: 60px; height: 60px"> Price: $<%=listing.getPrice()%><br>
-		Description:
-		<%=listing.getDescription()%><br> <img
-			src="<%=listing.getSeller().imageFilepath()%>"
-			style="width: 60px; height: 60px"> Seller:
-		<%=listing.getSeller().getName()%><br> <br>
+<%-- 		Name: <a href="item-details?id=<%=listing.getId()%>"><%=listing.getName()%></a> --%>
+		Name: <%=listing.getName()%><br> 
+<%-- 		<img src="<%=listing.getImageFilepath()%>" --%>
+<!-- 			style="width: 60px; height: 60px">  -->
+		Price: $<%=listing.getPrice()%><br>
+		Description: <%=listing.getDescription()%><br> 
+<%-- 		<img src="<%=listing.getSeller().imageFilepath()%>" --%>
+<!-- 			style="width: 60px; height: 60px">  -->
+		Seller: <%=listing.getSeller().getName()%><br><br>
 		<%
 			}
 		%>

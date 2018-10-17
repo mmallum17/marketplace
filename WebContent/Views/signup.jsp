@@ -49,7 +49,7 @@
 			Name:<br> <input type="text" name="name" required><br>
 			Email:<br> <input type="email" name="email" required><br>
 			Password:<br> <input type="password" name="password" required><br>
-			Upload profile photo:<br> <input type="file" name="photo" /><br>
+			<!-- Upload profile photo:<br> <input type="file" name="photo" /><br> -->
 			<br> <input type="submit" value="Submit">
 		</form>
 	</div>

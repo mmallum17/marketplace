@@ -48,7 +48,7 @@
 			Item Name:<br> <input type="text" name="itemName" required><br>
 			Price:<br> <input type="number" name="price" required><br>
 			Description:<br> <input type="text" name="description"><br>
-			Upload item photo:<br> <input type="file" name="photo" /><br>
+<!-- 			Upload item photo:<br> <input type="file" name="photo" /><br> -->
 			<br> <input type="submit" value="List Item">
 		</form>
 	</div>
