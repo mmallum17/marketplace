@@ -45,6 +45,11 @@
 			<strong>Sign up</strong> to use MavMarket!
 		</h2>
 		<p>Please fill out the form below to create a user account.</p>
+		<%
+			if(request.getAttribute("invalidSignupCreds") != null) {
+				out.println("<p style=\"color:red;\">Email address already associated with a user!</p>");
+			}
+		%>
 		<form action="signup" method="post" enctype="multipart/form-data">
 			Name:<br> <input type="text" name="name" required><br>
 			Email:<br> <input type="email" name="email" required><br>

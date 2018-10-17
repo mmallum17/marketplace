@@ -54,22 +54,23 @@ public class SignupController extends HttpServlet {
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
+		String filename = "";
 		
 		// Get and store image
-		Part filePart = request.getPart("photo");
-		String filename = getSubmittedFileName(filePart);
-		InputStream fileContent = filePart.getInputStream();
-		String operatingSystem = System.getProperty("os.name");
-		String rootPath = null;
-		if(operatingSystem.equals("Linux")) {
-			rootPath = getServletContext().getInitParameter("linuxRoot");
-		}
-		else {
-			rootPath = getServletContext().getInitParameter("windowsRoot");
-		}
-		Path serverImageFilepath = Paths.get(rootPath, getServletContext().getInitParameter("userImagePath"), filename);
-		Files.deleteIfExists(serverImageFilepath);
-		Files.copy(fileContent, serverImageFilepath, StandardCopyOption.REPLACE_EXISTING);
+//		Part filePart = request.getPart("photo");
+//		String filename = getSubmittedFileName(filePart);
+//		InputStream fileContent = filePart.getInputStream();
+//		String operatingSystem = System.getProperty("os.name");
+//		String rootPath = null;
+//		if(operatingSystem.equals("Linux")) {
+//			rootPath = getServletContext().getInitParameter("linuxRoot");
+//		}
+//		else {
+//			rootPath = getServletContext().getInitParameter("windowsRoot");
+//		}
+//		Path serverImageFilepath = Paths.get(rootPath, getServletContext().getInitParameter("userImagePath"), filename);
+//		Files.deleteIfExists(serverImageFilepath);
+//		Files.copy(fileContent, serverImageFilepath, StandardCopyOption.REPLACE_EXISTING);
 		
 		// Insert new user into database
 		Connection conn = (Connection) getServletContext().getAttribute("DBConnect");
@@ -81,16 +82,20 @@ public class SignupController extends HttpServlet {
 			preparedStmt.setString(2, email);
 			preparedStmt.setString(3, password);
 			preparedStmt.setString(4,  filename);
-			preparedStmt.execute();
+			preparedStmt.execute();		
+			// Redirect to login
+			response.sendRedirect("login");
 		} catch (SQLException e) {
+			
 			System.out.println("Database Error!!");
 			System.out.println(e.getErrorCode());
 			System.out.println(e.getSQLState());
 			e.printStackTrace();
+			request.setAttribute("invalidSignupCreds", true);
+			request.getRequestDispatcher("Views/signup.jsp").forward(request, response);
 		}
 
-		// Redirect to login
-		response.sendRedirect("login");
+
 	}
 	
 	private static String getSubmittedFileName(Part part) {
