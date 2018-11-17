@@ -6,15 +6,15 @@
   </welcome-file-list>
   <context-param>
     <param-name>DBuser</param-name>
-    <param-value>newremoteuser</param-value>
+    <param-value>marketplace_user</param-value>
   </context-param>
   <context-param>
     <param-name>DBpassword</param-name>
-    <param-value>password</param-value>
+    <param-value>mp_vm_db</param-value>
   </context-param>
   <context-param>
     <param-name>DBURL</param-name>
-    <param-value>jdbc:mysql://ec2-18-217-205-10.us-east-2.compute.amazonaws.com:3306/marketplace</param-value>
+    <param-value>jdbc:mysql://ec2-18-223-22-168.us-east-2.compute.amazonaws.com:3306/marketplace</param-value>
   </context-param>
   <context-param>
     <description>Windows Root</description>
