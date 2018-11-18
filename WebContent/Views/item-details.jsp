@@ -17,5 +17,6 @@
 	Price: $<%=listing.getPrice()%><br> 
 	Description: <%=listing.getDescription()%><br> 
 	Seller: <%=listing.getSeller().getName()%><br>
+	
 </body>
 </html>

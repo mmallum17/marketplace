@@ -34,7 +34,7 @@ background-color: #8a8a8a;
 	background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #8c3437 15%, #505050 85%);
 	background-image: url("images/overlay.png"), linear-gradient(45deg, #8c3437 15%, #505050 85%);
 		color: #000000;
-    font-size: 87.5%; /* Base font size: 14px */
+    font-size: 125%; /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.429;
     margin: 0;
@@ -42,16 +42,17 @@ background-color: #8a8a8a;
     text-align: left;
 	}
 .body {clear: both; margin: 0 auto; width: 800px;}
+
 	
 /*headings*/
-h2 {font-size: 1.6em}
-h3 {font-size: 1.4em}
-h4 {font-size: 1.2em}
-h5 {font-size: 1.1em}
-h6 {font-size: 1em}
+h2 {font-size: 2em}
+h3 {font-size: 2.8em}
+h4 {font-size: 2.4em}
+h5 {font-size: 2.2em}
+h6 {font-size: 2em}
 
 h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.1;
   margin-bottom: .8em;
 }
@@ -72,7 +73,7 @@ a:hover, a:active {
 }
 	
 /*paragraphs*/
-	p {margin-bottom: 1.143em;}
+	p {margin-bottom: 1.143em; font-size: 16px;}
 * p:last-child {margin-bottom: 0;}
 
 strong, b {font-weight: bold;}
@@ -83,7 +84,7 @@ em, i {font-style: italic;}
 /*navigation*/
   #mavbanner nav {
     background: black;
-    font-size: 1.143em;
+    font-size: 1.543em;
     height: 40px;
     line-height: 30px;
     margin: 0 auto 2em auto;
@@ -100,6 +101,7 @@ em, i {font-style: italic;}
 	  margin: 0 auto;
 	  padding: 0;
 	  width: 800px;
+	  float: left;
   }
   #mavbanner nav li {
 	  float: left; 
@@ -119,8 +121,19 @@ em, i {font-style: italic;}
     background: #C74451;
     color: #fff;
     text-shadow: none !important;
+    height: 40px;
   }
+.mypanel-heading{
+	    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 2.5em;
+}
 
+.mypanel-footer{
+	    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 2em;
+}
   #mavbanner nav li:first-child a {
 	  margin-left: 0;
 	  float: left;
@@ -137,7 +150,7 @@ em, i {font-style: italic;}
   width: 760px;
   border-radius: 12px;
 	}
-	#page-description h2 {color: #C74451; font-size: 1.7em;}
+	#page-description h2 {color: #C74451; font-size: 2.7em;}
 	
 /*content*/
 	/*page description*/
@@ -149,7 +162,7 @@ em, i {font-style: italic;}
   width: 760px;
   border-radius: 12px;
 	}
-	#content h2 {color: #C74451; font-size: 1.7em;}
+	#content h2 {color: #C74451; font-size: 2.7em;}
 	
 /*website description*/
 	#website-description {
@@ -168,5 +181,5 @@ em, i {font-style: italic;}
 	#copyright {
 		color: #ffd3d3;
 		text-align: right;
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 	}

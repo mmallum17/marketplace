@@ -8,7 +8,6 @@
 <title>User Dashboard</title>
 </head>
 <body>
-<p>WHATUPPP</p>
 	<ex:navbar/>
 </body>
 </html>
