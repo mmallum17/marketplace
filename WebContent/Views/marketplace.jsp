@@ -35,6 +35,7 @@
 					} else {
 				%>
 				<li><a href="list-item">list item</a></li>
+				<li><a href="remove-item">remove item</a></li>
 				<li><a href="logout">logout</a></li>
 				<%
 					}

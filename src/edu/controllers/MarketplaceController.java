@@ -46,10 +46,11 @@ public class MarketplaceController extends HttpServlet {
 		
 		// Get all listings and associated user from database
 		Connection conn = (Connection) getServletContext().getAttribute("DBConnect");
-		String query = "SELECT listing.id AS listingId,listing.name AS listingName,listing.price,listing.description,listing.time_created,listing.image_filepath AS listingImageFilepath,user.name AS userName,user.email,user.image_filepath AS userImageFilepath FROM listing INNER JOIN user ON listing.seller_id = user.id";
+		String query = "SELECT listing.id AS listingId,listing.name AS listingName,listing.price,listing.description,listing.time_created,listing.image_filepath AS listingImageFilepath,user.name AS userName,user.email,user.image_filepath AS userImageFilepath FROM listing INNER JOIN user ON listing.seller_id = user.id WHERE deleted = ?";
 		PreparedStatement preparedStmt;
 		try {
 			preparedStmt = conn.prepareStatement(query);
+			preparedStmt.setInt(1, 0);
 			ResultSet rs = preparedStmt.executeQuery();
 			while (rs.next()) {
 				User seller = new User(-1, rs.getString("userName"), rs.getString("email"),
