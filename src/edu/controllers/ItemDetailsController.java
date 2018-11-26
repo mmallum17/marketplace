@@ -36,6 +36,12 @@ public class ItemDetailsController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Get parameters
 		int listingId = Integer.parseInt(request.getParameter("id"));
+		
+//		String operatingSystem = System.getProperty("os.name");
+//		String domain = "";
+//		if(!operatingSystem.equals("Linux")) {
+//			domain = "http://mav-market.ddns.net:8080/marketplace/";
+//		}
 
 		// Get user from database
 		Connection conn = (Connection) getServletContext().getAttribute("DBConnect");

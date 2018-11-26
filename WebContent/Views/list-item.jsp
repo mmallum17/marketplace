@@ -30,7 +30,7 @@
 					} else {
 				%>
 				<li><a href="list-item">list item</a></li>
-				<li><a href="remove-item">remove item</a></li>
+				<li><a href="my-items">my items</a></li>
 				<li><a href="logout">logout</a></li>
 				<%
 					}
@@ -49,7 +49,7 @@
 			Item Name:<br> <input type="text" name="itemName" required><br>
 			Price:<br> <input type="number" name="price" required><br>
 			Description:<br> <input type="text" name="description"><br>
-<!-- 			Upload item photo:<br> <input type="file" name="photo" /><br> -->
+			Upload item photo:<br> <input type="file" name="photo" /><br>
 			<br> <input type="submit" value="List Item">
 		</form>
 	</div>

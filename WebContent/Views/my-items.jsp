@@ -38,7 +38,7 @@
 					} else {
 				%>
 				<li><a href="list-item">list item</a></li>
-				<li class="active"><a href="remove-item">remove item</a></li>
+				<li class="active"><a href="my-items">my items</a></li>
 				<li><a href="logout">logout</a></li>
 				<%
 					}
@@ -68,12 +68,12 @@
 							Listing listing = currentListings.get(i * 3 + j);
 			%>
 			<div class="col-sm-4">
-				<a href="#my_modal" data-toggle="modal" data-book-id=<%=listing.getId()%>>
+				<a href="#editModal" data-toggle="modal" data-listing-id=<%=listing.getId()%> data-listing-name=<%=listing.getName() %> data-listing-price=<%=listing.getPrice() %> data-listing-description="<%=listing.getDescription() %>" data-listing-image=<%=listing.getImageFilepath() %>>
 					<div class="panel panel-danger">
 						<div class="panel-heading mypanel-heading"><%=listing.getName()%></div>
 						<div class="panel-body">
-							<img src=<%=listing.getImageFilepath()%> class="img-responsive"
-								style="width: 100%; height: 200px" alt="Image">
+							<img src="http://mav-market.ddns.net:8080/marketplace/images/item/<%=listing.getImageFilepath()%>" class="img-responsive"
+								style="width: 100%; height: 200px" onerror="this.onerror=null;this.src='http://mav-market.ddns.net:8080/marketplace/images/default-image.png';">
 						</div>
 						<div class="panel-footer mypanel-footer">
 							$<%=listing.getPrice()%><br>Location<br>
@@ -92,7 +92,35 @@
 		}
 	%>
 
-	<div class="modal" id="my_modal">
+	<div class="modal" id="editModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">Modal header</h4>
+				</div>
+				<div class="modal-body">
+					<form action="my-items" method="post">
+						Item Name:<br> <input type="text" name="itemName" value="" required><br>
+						Price:<br> <input type="number" name="price" value="" required><br>
+						Description:<br> <input type="text" name="description" value=""><br>
+<!-- 						Upload new item photo:<br> <input type="file" name="newPhoto" value="" /><br> -->
+						<input type="hidden" name="origImagePath" value="">
+						<input type="hidden" name="listingId" value="">
+						<br><button name="saveChangesBtn" type="submit" class="btn btn-default" value="">Save Changes</button>
+						<a href="#confirmModal" id="deleteButton" class="btn btn-default" data-toggle="modal" data-listing-id="" data-dismiss="modal">Delete</a>
+					</form>
+<!-- 					<input type="text" name="bookId" value="" /> -->
+<!-- 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="confirmModal">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -103,8 +131,8 @@
 				</div>
 				<div class="modal-body">
 					<p>Are you sure you want to remove item?</p>
-					<form action="remove-item" method="post">
-						<button name="bookId" type="submit" class="btn btn-default" value="">Yes</button>
+					<form action="my-items" method="post">
+						<button name="confirmBtn" type="submit" class="btn btn-default" value="">Yes</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
 					</form>
 <!-- 					<input type="text" name="bookId" value="" /> -->
@@ -148,10 +176,26 @@
 
 </body>
 <script type="text/javascript">
-$('#my_modal').on('show.bs.modal', function(e) {
-    var bookId = $(e.relatedTarget).data('book-id');
-    $(e.currentTarget).find('button[name="bookId"]').val(bookId);
-});
+	$('#editModal').on('show.bs.modal', function(e) {
+     	var listingId = $(e.relatedTarget).data('listing-id');
+     	var listingName = $(e.relatedTarget).data('listing-name');
+     	var listingPrice = $(e.relatedTarget).data('listing-price');
+     	var listingDescription = $(e.relatedTarget).data('listing-description');
+     	var listingImage = $(e.relatedTarget).data('listing-image');
+     	
+     	$(e.currentTarget).find('input[name="listingId"]').val(listingId);
+     	$(e.currentTarget).find('input[name="itemName"]').val(listingName);
+     	$(e.currentTarget).find('input[name="price"]').val(listingPrice);
+     	$(e.currentTarget).find('input[name="description"]').val(listingDescription);
+      	$(e.currentTarget).find('input[name="origImagePath"]').val(listingImage);
+
+    	$(e.currentTarget).find('a[id="deleteButton"]').attr("data-listing-id", listingId);
+ 	});
+	
+	$('#confirmModal').on('show.bs.modal', function(e) {
+		var listingId = $(e.relatedTarget).data('listing-id');
+		$(e.currentTarget).find('button[name="confirmBtn"]').val(listingId);
+	});
 </script>
 
 </html>

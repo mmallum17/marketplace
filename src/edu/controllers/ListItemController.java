@@ -53,23 +53,27 @@ public class ListItemController extends HttpServlet {
 		int price = Integer.parseInt(request.getParameter("price"));
 		String description = request.getParameter("description");
 		int userId = ((User) request.getSession().getAttribute("user")).getId();
-		String filename = "";
+		
+		System.out.println(itemName);
+		System.out.println(price);
+		System.out.println(description);
+//		String filename = "";
 
 		// Get and store image
-//		Part filePart = request.getPart("photo");
-//		String filename = getSubmittedFileName(filePart);
-//		InputStream fileContent = filePart.getInputStream();
-//		String operatingSystem = System.getProperty("os.name");
-//		String rootPath = null;
-//		if(operatingSystem.equals("Linux")) {
-//			rootPath = getServletContext().getInitParameter("linuxRoot");
-//		}
-//		else {
-//			rootPath = getServletContext().getInitParameter("windowsRoot");
-//		}
-//		Path serverImageFilepath = Paths.get(rootPath, getServletContext().getInitParameter("itemImagePath"), filename);
-//		Files.deleteIfExists(serverImageFilepath);
-//		Files.copy(fileContent, serverImageFilepath, StandardCopyOption.REPLACE_EXISTING);
+		Part filePart = request.getPart("photo");
+		String filename = getSubmittedFileName(filePart);
+		InputStream fileContent = filePart.getInputStream();
+		String operatingSystem = System.getProperty("os.name");
+		String rootPath = null;
+		if(operatingSystem.equals("Linux")) {
+			rootPath = getServletContext().getInitParameter("linuxRoot");
+		}
+		else {
+			rootPath = getServletContext().getInitParameter("windowsRoot");
+		}
+		Path serverImageFilepath = Paths.get(rootPath, getServletContext().getInitParameter("itemImagePath"), filename);
+		Files.deleteIfExists(serverImageFilepath);
+		Files.copy(fileContent, serverImageFilepath, StandardCopyOption.REPLACE_EXISTING);
 		
 		// Insert new item into database
 		Connection conn = (Connection) getServletContext().getAttribute("DBConnect");
