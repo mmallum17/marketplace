@@ -64,7 +64,7 @@ public class LoginController extends HttpServlet {
 					User loggedInUser = new User(rs.getInt("id"), rs.getString("name"), email, null);
 					request.getSession().setAttribute("user", loggedInUser);
 					// Redirect to marketplace **CHANGE LATER TO USER DASHBOARD**
-					response.sendRedirect("items");
+					response.sendRedirect("my-items");
 				}
 				else {
 					System.out.println("Incorrect password");

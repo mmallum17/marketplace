@@ -59,6 +59,36 @@
 		<%=listing.getDescription()%><br> Seller:
 		<%=listing.getSeller().getName()%><br>
 		<img src="http://mav-market.ddns.net:8080/marketplace/images/item/<%=listing.getImageFilepath()%>" class="img-responsive" style="width: 50%; height: 200px" onerror="this.onerror=null;this.src='http://mav-market.ddns.net:8080/marketplace/images/default-image.png';">
+		Interested in Item?<a href="#notifyModal" id="notifyBtn" class="btn btn-default" data-toggle="modal" 
+							data-listing-name="<%=listing.getName() %>" data-seller-email="<%=listing.getSeller().getEmail() %>" 
+							data-buyer-name="<%=request.getAttribute("userName") %>" data-buyer-email="<%=request.getAttribute("userEmail") %>"
+							data-buyer-phone="<%=request.getAttribute("userPhone") %>">Notify Seller</a>
+	</div>
+	
+	<div class="modal" id="notifyModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">Notify Seller</h4>
+				</div>
+				<div class="modal-body">
+					Send Contact Info To The Seller:
+					<form action="send-email" method="post">
+						Name: <br> <input type="text" name="userName" value="" required><br>
+						Email:<br> <input type="email" name="userEmail" value="" required><br>
+						Phone:<br> <input type="text" name="userPhone" value=""><br>
+						<input type="hidden" name="sellerEmail" value="">
+						<input type="hidden" name="listingName" value="">
+						<br><button name="saveChangesBtn" type="submit" class="btn btn-default" value="">Send Contact Info</button>
+					</form>
+<!-- 					<input type="text" name="bookId" value="" /> -->
+<!-- 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!--  FOOTER: WEBSITE DESCRIPTION  -->
@@ -72,4 +102,21 @@
 	<!-- COPYRIGHT TEXT -->
 	<p class="body" id="copyright">&copy; 2018 Los Tres Muchachos</p>
 </body>
+<script type="text/javascript">
+	$('#notifyModal').on('show.bs.modal', function(e) {
+     	var sellerEmail = $(e.relatedTarget).data('seller-email');
+     	var listingName = $(e.relatedTarget).data('listing-name');
+     	var buyerName = $(e.relatedTarget).data('buyer-name');
+     	var buyerEmail = $(e.relatedTarget).data('buyer-email');
+     	var buyerPhone = $(e.relatedTarget).data('buyer-phone');
+     	
+     	$(e.currentTarget).find('input[name="userName"]').val(buyerName);
+     	$(e.currentTarget).find('input[name="userEmail"]').val(buyerEmail);
+     	$(e.currentTarget).find('input[name="userPhone"]').val(buyerPhone);
+     	$(e.currentTarget).find('input[name="sellerEmail"]').val(sellerEmail);
+      	$(e.currentTarget).find('input[name="listingName"]').val(listingName);
+
+ 	});
+</script>
+
 </html>

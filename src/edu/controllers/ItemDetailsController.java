@@ -36,6 +36,19 @@ public class ItemDetailsController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Get parameters
 		int listingId = Integer.parseInt(request.getParameter("id"));
+		String userName = "";
+		String userEmail = "";
+		String phone = "";
+		
+		User currentUser = (User) request.getSession().getAttribute("user");
+		if(currentUser != null) {
+			userName = currentUser.getName();
+			userEmail = currentUser.getEmail();
+		}
+		
+		request.setAttribute("userName", userName);
+		request.setAttribute("userEmail", userEmail);
+		request.setAttribute("userPhone", phone);
 		
 //		String operatingSystem = System.getProperty("os.name");
 //		String domain = "";

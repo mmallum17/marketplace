@@ -36,4 +36,20 @@
     <param-name>itemImagePath</param-name>
     <param-value>images/item</param-value>
   </context-param>
+  <context-param>
+    <param-name>emailHost</param-name>
+    <param-value>smtp.gmail.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>emailPort</param-name>
+    <param-value>587</param-value>
+  </context-param>
+  <context-param>
+    <param-name>emailUser</param-name>
+    <param-value>mavmarket360@gmail.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>emailPass</param-name>
+    <param-value>se_gm_18</param-value>
+  </context-param>
 </web-app>
