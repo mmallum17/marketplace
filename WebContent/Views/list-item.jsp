@@ -7,6 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MavMarket Community Marketplace</title>
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="assets/css/mavmarketcss.css">
 </head>
@@ -54,27 +60,9 @@
 		</form>
 	</div>
 
-	<!--  CONTENT: THIS IS WHERE PAGE SPECIFIC CONTENT IS TO BE ADDED  -->
-	<div id="content" class="body">
-
-
-		<h2>
-			<b>10/17/2018:</b> MavMarket Released
-		</h2>
-		<p>MavMarket v1.0 is released. Features include:</p>
-		<br>
-		<h2>
-			<b>9/25/2018:</b> MavMarket Design Complete
-		</h2>
-		<p>MavMarket design is completed. Features include:</p>
-		<br>
-		<h2>
-			<b>9/10/2018:</b> Los Tres Muchachos Formed
-		</h2>
-		<p>The creators of the MavMarket online retail web application
-			assembled as a team to complete the project</p>
-
-	</div>
+		<footer id="website-description" class="body">
+	Want to list a new item? Click <b><a href="list-item">here</a></b> to start selling today!
+	</footer>
 
 	<!--  FOOTER: WEBSITE DESCRIPTION  -->
 	<footer id="website-description" class="body">

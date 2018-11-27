@@ -21,7 +21,8 @@
 		<!--  NAVIGATION BAR: LIST ITEMS CAN BE GENERATED DYNAMICALLY BASED ON USER ACCOUNT  -->
 		<nav>
 			<ul>
-				<li class="active"><a href="home">home</a></li>
+				<li style="border-top-left-radius: 6px; border-bottom-left-radius: 6px;"
+    class="active"><a href="home">home</a></li>
 				<li><a href="items">marketplace</a></li>
 				<%
 					User currentUser = (User) session.getAttribute("user");
@@ -53,7 +54,7 @@
 			Mav Market is an online retail web application that allows users to
 			buy and sell amongst themselves. Users will be able to create
 			accounts to track the items they buy and sell on the community
-			marketplace. Click <a href="#">here</a> to get started!
+			marketplace. Click <a href="items">here</a> to get started!
 		</p>
 	</div>
 

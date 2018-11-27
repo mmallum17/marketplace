@@ -63,27 +63,6 @@
 		</form>
 	</div>
 
-	<!--  CONTENT: THIS IS WHERE PAGE SPECIFIC CONTENT IS TO BE ADDED  -->
-	<div id="content" class="body">
-
-
-		<h2>
-			<b>10/17/2018:</b> MavMarket Released
-		</h2>
-		<p>MavMarket v1.0 is released. Features include:</p>
-		<br>
-		<h2>
-			<b>9/25/2018:</b> MavMarket Design Complete
-		</h2>
-		<p>MavMarket design is completed. Features include:</p>
-		<br>
-		<h2>
-			<b>9/10/2018:</b> Los Tres Muchachos Formed
-		</h2>
-		<p>The creators of the MavMarket online retail web application
-			assembled as a team to complete the project</p>
-
-	</div>
 
 	<!--  FOOTER: WEBSITE DESCRIPTION  -->
 	<footer id="website-description" class="body">

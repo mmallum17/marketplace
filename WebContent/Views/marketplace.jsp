@@ -26,7 +26,7 @@
 		<!--  NAVIGATION BAR: LIST ITEMS CAN BE GENERATED DYNAMICALLY BASED ON USER ACCOUNT  -->
 		<nav>
 			<ul>
-				<li><a href="home">home</a></li>
+				<li><a style="align:center;" href="home">home</a></li>
 				<li class="active"><a href="items">marketplace</a></li>
 				<%
 					User currentUser = (User) session.getAttribute("user");
@@ -56,7 +56,7 @@
 	<!-- 		<p>Here you will find items listed for sale by MavMarket users.</p> -->
 	
 	
-	<div style="padding-bottom:5px"class="container">
+	<div style="padding-bottom:25px"class="container">
 		<form action="items">
   <div class="row">
     <div class="col-xs-6 col-md-4">
@@ -119,30 +119,6 @@
 	<!-- 			style="width: 60px; height: 60px">  -->
 	<%-- Seller: <%=listing.getSeller().getName()%><br><br>--%>
 
-
-
-
-	<!--  CONTENT: THIS IS WHERE PAGE SPECIFIC CONTENT IS TO BE ADDED  -->
-	<!-- 	<div id="content" class="body"> -->
-
-
-	<!-- 		<h2> -->
-	<!-- 			<b>10/17/2018:</b> MavMarket Released -->
-	<!-- 		</h2> -->
-	<!-- 		<p>MavMarket v1.0 is released. Features include:</p> -->
-	<!-- 		<br> -->
-	<!-- 		<h2> -->
-	<!-- 			<b>9/25/2018:</b> MavMarket Design Complete -->
-	<!-- 		</h2> -->
-	<!-- 		<p>MavMarket design is completed. Features include:</p> -->
-	<!-- 		<br> -->
-	<!-- 		<h2> -->
-	<!-- 			<b>9/10/2018:</b> Los Tres Muchachos Formed -->
-	<!-- 		</h2> -->
-	<!-- 		<p>The creators of the MavMarket online retail web application -->
-	<!-- 			assembled as a team to complete the project</p> -->
-
-	<!-- 	</div> -->
 
 	<!--  FOOTER: WEBSITE DESCRIPTION  -->
 	<footer id="website-description" class="body">

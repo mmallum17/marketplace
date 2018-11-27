@@ -55,9 +55,9 @@
 		%>
 	<img src="http://mav-market.ddns.net:8080/marketplace/images/item/<%=listing.getImageFilepath()%>" class="img-responsive" style="width: 50%; height: 200px" onerror="this.onerror=null;this.src='http://mav-market.ddns.net:8080/marketplace/images/default-image.png';"align="left">
      <h2 align="center"><%=listing.getName()%>  ---$<%=listing.getPrice()%></h2> 
-	 <div align="center">Description:<%=listing.getDescription()%><br><br><br><br></div> 
+	 <div align="center"><%=listing.getDescription()%><br><br><br><br></div> 
 
-	<div align="center">	Interested in <%=listing.getSeller().getName()%>'s Item? <a href="#notifyModal" id="notifyBtn" class="btn btn-default" data-toggle="modal" 
+	<div align="center">	Interested in <%=listing.getSeller().getName()%>'s Item? <a style="color:white; margin-left: 10px"  href="#notifyModal" id="notifyBtn" class="btn btn-danger" data-toggle="modal" 
 							data-listing-name="<%=listing.getName() %>" data-seller-email="<%=listing.getSeller().getEmail() %>" 
 							data-buyer-name="<%=request.getAttribute("userName") %>" data-buyer-email="<%=request.getAttribute("userEmail") %>"
 							data-buyer-phone="<%=request.getAttribute("userPhone") %>">Notify Seller</a></div>
@@ -70,7 +70,7 @@
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<h4 align="center" class="modal-title">Notify Seller</h4>
+					<h2 align="center" class="modal-title">Notify Seller</h2>
 				</div>
 				<div class="modal-body">
 					Send Contact Info To The Seller:

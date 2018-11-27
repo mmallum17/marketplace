@@ -99,7 +99,7 @@
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<h4 class="modal-title">Modal header</h4>
+					<h4 class="modal-title">Edit Listing</h4>
 				</div>
 				<div class="modal-body">
 					<form action="my-items" method="post">
@@ -110,7 +110,7 @@
 						<input type="hidden" name="origImagePath" value="">
 						<input type="hidden" name="listingId" value="">
 						<br><button name="saveChangesBtn" type="submit" class="btn btn-default" value="">Save Changes</button>
-						<a href="#confirmModal" id="deleteButton" class="btn btn-default" data-toggle="modal" data-listing-id="" data-dismiss="modal">Delete</a>
+						<a style="color:white;" href="#confirmModal" id="deleteButton" class="btn btn-danger" data-toggle="modal" data-listing-id="" data-dismiss="modal">Delete</a>
 					</form>
 <!-- 					<input type="text" name="bookId" value="" /> -->
 <!-- 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
@@ -127,13 +127,13 @@
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<h4 class="modal-title">Modal header</h4>
+					<h4 class="modal-title">Delete Item</h4>
 				</div>
 				<div class="modal-body">
 					<p>Are you sure you want to remove item?</p>
 					<form action="my-items" method="post">
 						<button name="confirmBtn" type="submit" class="btn btn-default" value="">Yes</button>
-						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 					</form>
 <!-- 					<input type="text" name="bookId" value="" /> -->
 <!-- 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
@@ -141,27 +141,10 @@
 			</div>
 		</div>
 	</div>
-	<!--  CONTENT: THIS IS WHERE PAGE SPECIFIC CONTENT IS TO BE ADDED  -->
-	<!-- 	<div id="content" class="body"> -->
-
-
-	<!-- 		<h2> -->
-	<!-- 			<b>10/17/2018:</b> MavMarket Released -->
-	<!-- 		</h2> -->
-	<!-- 		<p>MavMarket v1.0 is released. Features include:</p> -->
-	<!-- 		<br> -->
-	<!-- 		<h2> -->
-	<!-- 			<b>9/25/2018:</b> MavMarket Design Complete -->
-	<!-- 		</h2> -->
-	<!-- 		<p>MavMarket design is completed. Features include:</p> -->
-	<!-- 		<br> -->
-	<!-- 		<h2> -->
-	<!-- 			<b>9/10/2018:</b> Los Tres Muchachos Formed -->
-	<!-- 		</h2> -->
-	<!-- 		<p>The creators of the MavMarket online retail web application -->
-	<!-- 			assembled as a team to complete the project</p> -->
-
-	<!-- 	</div> -->
+	
+	<footer id="website-description" class="body">
+	Want to list a new item? Click <b><a href="list-item">here</a></b> to start selling today!
+	</footer>
 
 	<!--  FOOTER: WEBSITE DESCRIPTION  -->
 	<footer id="website-description" class="body">
