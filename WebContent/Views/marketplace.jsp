@@ -54,11 +54,23 @@
 	<!-- 			Welcome to the <strong>Marketplace</strong>! -->
 	<!-- 		</h2> -->
 	<!-- 		<p>Here you will find items listed for sale by MavMarket users.</p> -->
-	<div class="container">
+	
+	
+	<div style="padding-bottom:5px"class="container">
 		<form action="items">
-			<input type="text" placeholder="Search.." name="search">
-			<button type="submit">Search</button>
-		</form>
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <input name="search" type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+        <div class="input-group-btn">
+          <button class="btn btn-danger" type="submit">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>                       
 	</div>
 
 	<%
@@ -77,13 +89,13 @@
 			<div class="col-sm-4">
 				<a href="item-details?id=<%=listing.getId()%>">
 					<div class="panel panel-danger">
-						<div class="panel-heading mypanel-heading"><%=listing.getName()%></div>
+						<div style="color:black;" class="panel-heading mypanel-heading"><%=listing.getName()%></div>
 						<div class="panel-body">
 							<img src="http://mav-market.ddns.net:8080/marketplace/images/item/<%=listing.getImageFilepath()%>" class="img-responsive"
 								style="width: 100%; height: 200px" onerror="this.onerror=null;this.src='http://mav-market.ddns.net:8080/marketplace/images/default-image.png';">
 						</div>
 						<div class="panel-footer mypanel-footer">
-							$<%=listing.getPrice()%><br>Location<br>
+							$<%=listing.getPrice()%>
 						</div>
 					</div>
 				</a>
