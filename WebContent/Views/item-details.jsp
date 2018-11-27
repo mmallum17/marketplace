@@ -53,16 +53,14 @@
 		<%
 			Listing listing = (Listing) request.getAttribute("listing");
 		%>
-		Name:
-		<%=listing.getName()%><br> Price: $<%=listing.getPrice()%><br>
-		Description:
-		<%=listing.getDescription()%><br> Seller:
-		<%=listing.getSeller().getName()%><br>
-		<img src="http://mav-market.ddns.net:8080/marketplace/images/item/<%=listing.getImageFilepath()%>" class="img-responsive" style="width: 50%; height: 200px" onerror="this.onerror=null;this.src='http://mav-market.ddns.net:8080/marketplace/images/default-image.png';">
-		Interested in Item?<a href="#notifyModal" id="notifyBtn" class="btn btn-default" data-toggle="modal" 
+	<img src="http://mav-market.ddns.net:8080/marketplace/images/item/<%=listing.getImageFilepath()%>" class="img-responsive" style="width: 50%; height: 200px" onerror="this.onerror=null;this.src='http://mav-market.ddns.net:8080/marketplace/images/default-image.png';"align="left">
+     <h2 align="center"><%=listing.getName()%>  ---$<%=listing.getPrice()%></h2> 
+	 <div align="center">Description:<%=listing.getDescription()%><br><br><br><br></div> 
+
+	<div align="center">	Interested in <%=listing.getSeller().getName()%>'s Item? <a href="#notifyModal" id="notifyBtn" class="btn btn-default" data-toggle="modal" 
 							data-listing-name="<%=listing.getName() %>" data-seller-email="<%=listing.getSeller().getEmail() %>" 
 							data-buyer-name="<%=request.getAttribute("userName") %>" data-buyer-email="<%=request.getAttribute("userEmail") %>"
-							data-buyer-phone="<%=request.getAttribute("userPhone") %>">Notify Seller</a>
+							data-buyer-phone="<%=request.getAttribute("userPhone") %>">Notify Seller</a></div>
 	</div>
 	
 	<div class="modal" id="notifyModal">
@@ -72,7 +70,7 @@
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<h4 class="modal-title">Notify Seller</h4>
+					<h4 align="center" class="modal-title">Notify Seller</h4>
 				</div>
 				<div class="modal-body">
 					Send Contact Info To The Seller:
