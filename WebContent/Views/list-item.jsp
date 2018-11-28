@@ -31,11 +31,11 @@
 					if (currentUser == null) {
 				%>
 				<li><a href="login">log in</a></li>
-				<li class="active"><a href="signup">sign up</a></li>
+				<li><a href="signup">sign up</a></li>
 				<%
 					} else {
 				%>
-				<li><a href="list-item">list item</a></li>
+				<li class="active"><a  href="list-item">list item</a></li>
 				<li><a href="my-items">my items</a></li>
 				<li><a href="logout">logout</a></li>
 				<%
@@ -53,16 +53,13 @@
 		</h2>
 		<form action="list-item" method="post" enctype="multipart/form-data">
 			Item Name:<br> <input type="text" name="itemName" required><br>
-			Price:<br> <input type="number" name="price" required><br>
-			Description:<br> <input type="text" name="description"><br>
-			Upload item photo:<br> <input type="file" name="photo" /><br>
+			<br>Price:<br> <input type="number" name="price" required><br>
+			<br>Description:<br> <input type="text" name="description"><br>
+			<br>Upload item photo:<br> <input type="file" name="photo" /><br>
 			<br> <input type="submit" value="List Item">
 		</form>
 	</div>
 
-		<footer id="website-description" class="body">
-	Want to list a new item? Click <b><a href="list-item">here</a></b> to start selling today!
-	</footer>
 
 	<!--  FOOTER: WEBSITE DESCRIPTION  -->
 	<footer id="website-description" class="body">

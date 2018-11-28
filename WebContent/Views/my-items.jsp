@@ -104,8 +104,8 @@
 				<div class="modal-body">
 					<form action="my-items" method="post">
 						Item Name:<br> <input type="text" name="itemName" value="" required><br>
-						Price:<br> <input type="number" name="price" value="" required><br>
-						Description:<br> <input type="text" name="description" value=""><br>
+						<br>Price:<br> <input type="number" name="price" value="" required><br>
+						<br>Description:<br> <input type="text" name="description" value=""><br>
 <!-- 						Upload new item photo:<br> <input type="file" name="newPhoto" value="" /><br> -->
 						<input type="hidden" name="origImagePath" value="">
 						<input type="hidden" name="listingId" value="">

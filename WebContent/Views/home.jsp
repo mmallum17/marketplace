@@ -48,7 +48,7 @@
 	<!--  PAGE HEADER: PAGE DESCRIPTION  -->
 	<div id="page-description" class="body">
 		<h2>
-			Welcome to <strong>MavMarket v1.0</strong>
+			Welcome to <strong>MavMarket v2.0</strong>
 		</h2>
 		<p>
 			Mav Market is an online retail web application that allows users to
@@ -61,11 +61,15 @@
 	<!--  CONTENT: THIS IS WHERE PAGE SPECIFIC CONTENT IS TO BE ADDED  -->
 	<div id="content" class="body">
 
-
+        <h2>
+			<b>11/27/2018:</b> Mavmarket V2.0 Released
+		</h2>
+		<p>MavMarket v2.0 is released. Features include: Notify Seller, Search Bar, Edit/Delete Item and Item Details</p>
+		<br>
 		<h2>
 			<b>10/17/2018:</b> MavMarket Released
 		</h2>
-		<p>MavMarket v1.0 is released. Features include:</p>
+		<p>MavMarket v1.0 is released. Features include: Practically no functionality at all.</p>
 		<br>
 		<h2>
 			<b>9/25/2018:</b> MavMarket Design Complete

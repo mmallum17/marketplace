@@ -58,7 +58,7 @@
 		%>
 		<form action="login" method="post">
 			Email:<br> <input type="email" name="email" required><br>
-			Password:<br> <input type="password" name="password" required><br>
+			<br>Password:<br> <input type="password" name="password" required><br>
 			<br> <input type="submit" value="Submit">
 		</form>
 	</div>

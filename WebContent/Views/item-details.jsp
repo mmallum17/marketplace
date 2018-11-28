@@ -70,17 +70,17 @@
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<h2 align="center" class="modal-title">Notify Seller</h2>
+					<h2 align="left" class="modal-title">Notify Seller</h2>
 				</div>
 				<div class="modal-body">
 					Send Contact Info To The Seller:
 					<form action="send-email" method="post">
-						Name: <br> <input type="text" name="userName" value="" required><br>
-						Email:<br> <input type="email" name="userEmail" value="" required><br>
-						Phone:<br> <input type="text" name="userPhone" value=""><br>
+					<br>Name: <br> <input type="text" name="userName" value="" required><br>
+			        <br>Email:<br> <input type="email" name="userEmail" value="" required><br>
+					<br>Phone:<br> <input type="text" name="userPhone" value=""><br>
 						<input type="hidden" name="sellerEmail" value="">
 						<input type="hidden" name="listingName" value="">
-						<br><button name="saveChangesBtn" type="submit" class="btn btn-default" value="">Send Contact Info</button>
+						<br><button name="saveChangesBtn" type="submit" class="btn btn-danger" value="">Send Contact Info</button>
 					</form>
 <!-- 					<input type="text" name="bookId" value="" /> -->
 <!-- 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
