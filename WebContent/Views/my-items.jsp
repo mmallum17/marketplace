@@ -70,13 +70,13 @@
 			<div class="col-sm-4">
 				<a href="#editModal" data-toggle="modal" data-listing-id=<%=listing.getId()%> data-listing-name=<%=listing.getName() %> data-listing-price=<%=listing.getPrice() %> data-listing-description="<%=listing.getDescription() %>" data-listing-image=<%=listing.getImageFilepath() %>>
 					<div class="panel panel-danger">
-						<div class="panel-heading mypanel-heading"><%=listing.getName()%></div>
+						<div style="color:black;" class="panel-heading mypanel-heading"><%=listing.getName()%></div>
 						<div class="panel-body">
 							<img src="http://mav-market.ddns.net:8080/marketplace/images/item/<%=listing.getImageFilepath()%>" class="img-responsive"
 								style="width: 100%; height: 200px" onerror="this.onerror=null;this.src='http://mav-market.ddns.net:8080/marketplace/images/default-image.png';">
 						</div>
 						<div class="panel-footer mypanel-footer">
-							$<%=listing.getPrice()%><br>Location<br>
+							$<%=listing.getPrice()%>
 						</div>
 					</div>
 				</a>
@@ -110,7 +110,7 @@
 						<input type="hidden" name="origImagePath" value="">
 						<input type="hidden" name="listingId" value="">
 						<br><button name="saveChangesBtn" type="submit" class="btn btn-default" value="">Save Changes</button>
-						<a style="color:white;" href="#confirmModal" id="deleteButton" class="btn btn-danger" data-toggle="modal" data-listing-id="" data-dismiss="modal">Delete</a>
+						<a style="color:white; padding:6px 12px;" href="#confirmModal" id="deleteButton" class="btn btn-danger" data-toggle="modal" data-listing-id="" data-dismiss="modal">Delete</a>
 					</form>
 <!-- 					<input type="text" name="bookId" value="" /> -->
 <!-- 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->

@@ -57,7 +57,7 @@
      <h2 align="center"><%=listing.getName()%>  ---$<%=listing.getPrice()%></h2> 
 	 <div align="center"><%=listing.getDescription()%><br><br><br><br></div> 
 
-	<div align="center">	Interested in <%=listing.getSeller().getName()%>'s Item? <a style="color:white; margin-left: 10px"  href="#notifyModal" id="notifyBtn" class="btn btn-danger" data-toggle="modal" 
+	<div align="center">	Interested in <%=listing.getSeller().getName()%>'s Item? <a style="color:white; margin-left: 5px; padding: 2px 4px;"  href="#notifyModal" id="notifyBtn" class="btn btn-danger" data-toggle="modal" 
 							data-listing-name="<%=listing.getName() %>" data-seller-email="<%=listing.getSeller().getEmail() %>" 
 							data-buyer-name="<%=request.getAttribute("userName") %>" data-buyer-email="<%=request.getAttribute("userEmail") %>"
 							data-buyer-phone="<%=request.getAttribute("userPhone") %>">Notify Seller</a></div>
