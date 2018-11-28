@@ -24,7 +24,7 @@ public class Clogintest {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.chrome.driver", "/home/beef/Documents/chromedriver_linux64/chromedriver");
+	System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
 	driver = new ChromeDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -33,7 +33,7 @@ public class Clogintest {
   @Test
   public void testClogin() throws Exception {
 	// driver.get("http://mav-market.ddns.net:8080/marketplace/home");
-    driver.get("http://localhost:8080/marketplace/home");
+    driver.get("http://mav-market.ddns.net:8080/marketplace/home");
     Thread.sleep(2000);
     driver.findElement(By.linkText("log in")).click();
     Thread.sleep(3000);
