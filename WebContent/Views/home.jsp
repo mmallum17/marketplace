@@ -16,7 +16,9 @@
 <body>
 	<!--  BANNER: MAVERICK MARKET LOGO  -->
 	<header id="mavbanner" class="body">
+		<a href="home">
 		<img id="logo" src="images/mavmarket2.png" alt="MavMarket logo" />
+		</a>
 
 		<!--  NAVIGATION BAR: LIST ITEMS CAN BE GENERATED DYNAMICALLY BASED ON USER ACCOUNT  -->
 		<nav>
@@ -64,17 +66,24 @@
         <h2>
 			<b>11/27/2018:</b> Mavmarket V2.0 Released
 		</h2>
-		<p>MavMarket v2.0 is released. Features include: Notify Seller, Search Bar, Edit/Delete Item and Item Details</p>
+		<p>MavMarket v2.0 is released. Features include:</p>
+		<br>Notify Seller
+		<br>Search Bar
+		<br>Edit/Delete Item
+		<br>Item Details
 		<br>
 		<h2>
 			<b>10/17/2018:</b> MavMarket Released
 		</h2>
-		<p>MavMarket v1.0 is released. Features include: Practically no functionality at all.</p>
+		<p>MavMarket v1.0 is released. Features include:</p>
+		<br>User Accounts
 		<br>
 		<h2>
 			<b>9/25/2018:</b> MavMarket Design Complete
 		</h2>
 		<p>MavMarket design is completed. Features include:</p>
+		<br>MavMarket Logo
+		<br>Template
 		<br>
 		<h2>
 			<b>9/10/2018:</b> Los Tres Muchachos Formed
